@@ -16,19 +16,20 @@ Ideas for Group project
 - Email vertify with password reset
 - login serves
 - Profile Page
+- Auto Login with Token (Store in local Storage)
+  - JSON Web Tokens (Optional)
 - Phone/Mobile Browser Optimize (Optional)
 - Every morning at 8am, send the first result article of your topic. (Notification, Optional)
-- Auto Login with Token (Store in local Storage)
-	- JSON Web Tokens (Optional)
+
 
 Frontend
  - Home Screen 
  	- News Stores related to your "interest"
  		- With a scroll bar keep auto populate with more stories (Load more Button also works)
- 	- Click on News stories to go to the article from the site.  
+ 	- Click on News stories to go to the article from the site. 
+  - Logout Button
  	- Search to search for anything you key (Optional)
- 	- Fav news stories (optional)
- 	- Logout Button
+ 	- Fav news stories (optional) 	
  	- Upon first login, show a few articles from ALL your interest until you select one interest (optional)
 
  - Register (Only show the option if you're not logged in)
@@ -45,7 +46,6 @@ Frontend
  	- Toggle which outlits of news you want to hear from (optional)
  		- https://en.wikipedia.org/wiki/List_of_news_media_APIs
  		- Google News https://newsapi.org/s/google-news-api
- 		- NY Times https://developer.nytimes.com/
 
  - About us (Optional)
  	- A page about all the devs
