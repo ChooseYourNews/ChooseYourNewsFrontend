@@ -28,13 +28,13 @@ Frontend
  		- With a scroll bar keep auto populate with more stories (Load more Button also works)
  	- Click on News stories to go to the article from the site. 
   - Logout Button
- 	- Search to search for anything you key (Optional)
+ 	- Search to search for anything you key
  	- Fav news stories (optional) 	
  	- Upon first login, show a few articles from ALL your interest until you select one interest (optional)
 
  - Register (Only show the option if you're not logged in)
  	- Make accounts with email vertify
- 	- Preselect from a bunch of interest (Optionals)
+ 	- Preselect from a bunch of interest
  	- Preselect news outlit that you want to hear from (Optional)
 
  - Profile Page (Only show the option if you're logged in)
