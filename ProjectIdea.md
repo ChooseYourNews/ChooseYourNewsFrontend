@@ -66,6 +66,12 @@ Backend
    - P Key id
    - Interest String not null
 
+ - Session (for Analytic, optional)
+	- P Key id
+	- user_id foreign key
+	- Token String? unique (GUID [microsoft], UUID)
+	- start_date date
+
  - FavNews (optional)
    - P Key id
    - Foreign Key UsersID

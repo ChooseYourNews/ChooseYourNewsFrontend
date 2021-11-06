@@ -1,0 +1,34 @@
+<p>articles works!</p>
+
+<div id = "interests">
+	<span>List of Interests</span>
+	<li *ngFor="let interest of interests" (click)="onSelectInterest(interest)"> {{interest}}
+</div>
+
+<div id="testArticle">
+	<h1>
+		{{articleTest.title}}
+	</h1>	
+	<p>
+		By: {{articleTest.author}}
+	</p>
+	<p>
+		{{articleTest.content}}
+	</p>
+	
+</div>
+
+<div id="ArticleList" class = "articles">
+	<div *ngFor= "let article of articles">
+		<h1>
+		{{article.title}}
+		</h1>	
+		<p>
+			By: {{article.author}}
+		</p>
+		<p>
+			{{article.content}}
+		</p>
+	</div>
+	
+</div>
