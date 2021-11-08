@@ -48,7 +48,7 @@ body {
   font-family: inherit;
 }
 
-.dropdown-content {
+.dropdown-contents {
   display: none;
   position: absolute;
   background-color: #2B3130;

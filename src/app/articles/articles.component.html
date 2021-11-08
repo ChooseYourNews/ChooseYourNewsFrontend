@@ -3,7 +3,7 @@
 
 	<div id = "interests" class="dropdown">
 		<span class = "dropbtn">List of Interests</span>
-		<div class = "dropdownContent">
+		<div class = "dropdown-content">
 		<li *ngFor="let interest of interests" (click)="onSelectInterest(interest)" class="dropdown-content-element"> {{interest}} </li>
 		</div>
 	</div>

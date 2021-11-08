@@ -22,7 +22,7 @@ export class ArticlesComponent implements OnInit {
     let search_data = INTERESTS[0];
 
     //Search google news API for the interest
-    let query = `https://newsapi.org/v2/everything?q=${search_data}&from=2021-10-31&to=2021-10-31&sortBy=popularity&apiKey=${API_KEY}`;
+    let query = `https://newsapi.org/v2/everything?q=${search_data}&sortBy=popularity&apiKey=${API_KEY}`;
 
     this.getArticlesOnInterest(query);
   }
@@ -34,7 +34,7 @@ export class ArticlesComponent implements OnInit {
     this.articles = [];
 
     //New Query with new interest
-    let query = `https://newsapi.org/v2/everything?q=${interest}&from=2021-10-31&language=en&to=2021-10-31&sortBy=popularity&apiKey=${API_KEY}`;
+    let query = `https://newsapi.org/v2/everything?q=${interest}&sortBy=popularity&apiKey=${API_KEY}`;
     this.getArticlesOnInterest(query);
   }
 
