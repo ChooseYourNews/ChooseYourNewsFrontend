@@ -1,23 +1,28 @@
-<p>articles works!</p>
 
-<div id = "interests">
-	<span>List of Interests</span>
-	<li *ngFor="let interest of interests" (click)="onSelectInterest(interest)"> {{interest}}
+<div class = "navBar">
+
+	<div id = "interests" class="dropdown">
+		<span class = "dropbtn">List of Interests</span>
+		<div class = "dropdownContent">
+		<li *ngFor="let interest of interests" (click)="onSelectInterest(interest)" class="dropdown-content-element"> {{interest}} </li>
+		</div>
+	</div>
+
+	<div class = "profile">
+		<button type="button" (click)="goToProfile()">Profile</button>
+	</div>
+
 </div>
 
-<div>
-	<button type="button" (click)="goToProfile()">Profile</button>
-</div>
-
-<div id="ArticleList" class = "articles">
-	<div *ngFor= "let article of articles" (click)="onSelectArticle(article)">
-		<h1>
+<div id="ArticleList" class = "newsDiv">
+	<div *ngFor= "let article of articles" (click)="onSelectArticle(article)" class="articles">
+		<h1 class="Title">
 		{{article.title}}
 		</h1>	
-		<p>
+		<p class="author">
 			By: {{article.author}}
 		</p>
-		<p>
+		<p class = "content">
 			{{article.content}}
 		</p>
 	</div>
