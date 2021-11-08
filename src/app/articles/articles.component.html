@@ -1,0 +1,30 @@
+
+<div class = "navBar">
+
+	<div id = "interests" class="dropdown">
+		<span class = "dropbtn">List of Interests</span>
+		<div class = "dropdown-content">
+		<li *ngFor="let interest of interests" (click)="onSelectInterest(interest)" class="dropdown-content-element"> {{interest}} </li>
+		</div>
+	</div>
+
+	<div class = "profile">
+		<button type="button" (click)="goToProfile()">Profile</button>
+	</div>
+
+</div>
+
+<div id="ArticleList" class = "newsDiv">
+	<div *ngFor= "let article of articles" (click)="onSelectArticle(article)" class="articles">
+		<h1 class="Title">
+		{{article.title}}
+		</h1>	
+		<p class="author">
+			By: {{article.author}}
+		</p>
+		<p class = "content">
+			{{article.content}}
+		</p>
+	</div>
+	
+</div>
