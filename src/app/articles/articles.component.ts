@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Article } from '../article';
 import { INTERESTS } from '../interest-list';
 import { API_KEY } from '../api-key';
+import {Location} from '@angular/common'; 
+
 
 @Component({
   selector: 'app-articles',
@@ -12,20 +14,7 @@ export class ArticlesComponent implements OnInit {
   articles:Article[] = [];
   interests = INTERESTS;  
 
-  testVar = "Testing";
-
-  //articleTest2: Article;
-
-  articleTest: Article = {
-    author: "PAUL NEWBERRY",
-    content: "ATLANTA (AP) Matthew Kaminski had intended to play a Grateful Dead song as the walk-up music for Houston's starting pitcher at the World Series.\r\nLuis Garcia. Jerry Garcia. Get it?\r\nThen, after getti… [+7737 chars]",
-    description: "Matthew Kaminski had intended to play a Grateful Dead song as the walk-up music for Houston's starting pitcher at the World Series.  Then, after getting a...",
-    publishedAt: "2021-10-31T06:16:43Z",
-    title: "Play me a song: Braves organist charms fans, amuses players",
-    url: "https://news.yahoo.com/play-song-braves-organist-charms-061643048.html"
-  }
-
-  constructor() { }
+  constructor(private location: Location) { }
 
   ngOnInit(): void {
 
@@ -45,8 +34,16 @@ export class ArticlesComponent implements OnInit {
     this.articles = [];
 
     //New Query with new interest
-    let query = `https://newsapi.org/v2/everything?q=${interest}&from=2021-10-31&to=2021-10-31&sortBy=popularity&apiKey=${API_KEY}`;
+    let query = `https://newsapi.org/v2/everything?q=${interest}&from=2021-10-31&language=en&to=2021-10-31&sortBy=popularity&apiKey=${API_KEY}`;
     this.getArticlesOnInterest(query);
+  }
+
+  onSelectArticle(article: Article): void {
+    console.log("Test On Click Article", article.url);
+
+    //getting the URL
+    let url = article.url;
+    document.location.href = url;
   }
 
   getArticlesOnInterest(query: string): void {
@@ -77,6 +74,12 @@ export class ArticlesComponent implements OnInit {
 
         //console.log("\nEnd of fetch request", this.articles);
       })
+  }
+
+  goToProfile(): void {
+    this.location.replaceState("/profile/");
+    //console.log("Go To Profile Page");
+    //document.location.href = "/profile";
   }
 }
 

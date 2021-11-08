@@ -1,5 +1,15 @@
 # ChooseYourNews
 
+
+Please create a file in the SRC/app called api-key.ts
+```
+export const API_KEY: string = "your-google-news-api-key-here";
+
+```
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
 
 ## Development server

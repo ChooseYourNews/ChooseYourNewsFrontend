@@ -5,21 +5,12 @@
 	<li *ngFor="let interest of interests" (click)="onSelectInterest(interest)"> {{interest}}
 </div>
 
-<div id="testArticle">
-	<h1>
-		{{articleTest.title}}
-	</h1>	
-	<p>
-		By: {{articleTest.author}}
-	</p>
-	<p>
-		{{articleTest.content}}
-	</p>
-	
+<div>
+	<button type="button" (click)="goToProfile()">Profile</button>
 </div>
 
 <div id="ArticleList" class = "articles">
-	<div *ngFor= "let article of articles">
+	<div *ngFor= "let article of articles" (click)="onSelectArticle(article)">
 		<h1>
 		{{article.title}}
 		</h1>	
